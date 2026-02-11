@@ -22,7 +22,7 @@
             border-right: .15em solid white;
             white-space: nowrap;
             margin: 0 auto;
-            animation: typing 5s steps(40, end), blink-caret .75s step-end infinite;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
         }
         
         @keyframes typing {
@@ -34,9 +34,19 @@
             from, to { border-color: transparent }
             50% { border-color: white; }
         }
+        
+        .typewriter.done {
+            border-right: none;
+        }
     </style>
 </head>
 <body>
     <div class="typewriter">The Noonan Trust</div>
+    
+    <script>
+        setTimeout(function() {
+            document.querySelector('.typewriter').classList.add('done');
+        }, 3500);
+    </script>
 </body>
 </html>
